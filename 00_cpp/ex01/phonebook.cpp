@@ -6,33 +6,12 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 12:10:01 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/12 14:54:04 by manujime         ###   ########.fr       */
+/*   Updated: 2023/06/17 19:04:20 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "phonebook.hpp"
 
-//contact class
-class   contact
-{
-	public:
-		//contact(void);
-		//~contact(void);
-		void    add(void);
-		void    search(void);
-		void    exit(void);
-	private:
-		int        index;
-		int        count;
-		std::string first_name;
-		std::string last_name;
-		std::string nickname;
-		std::string postal_address;
-		std::string email_address;
-		std::string phone_number;
-		std::string birthday_date;
-};
 
 //this function of the contact class pompts the user to enter the contact's
 //information, and stores it in the class' private variables
@@ -54,37 +33,6 @@ void    contact::add(void)
 	std::cout << "Birthday date: ";
 	std::cin >> this->birthday_date;
 }
-
-//phonebook class
-class   phonebook
-{
-	public:
-		//phonebook(void);
-		//~phonebook(void);
-		void    add(void);
-		void    search(void);
-		void    exit(void);
-	private:
-		contact	contacts[7];
-		int		count;
-};
-
-//adds a contact to the phonebook
-//if the phonebook is full, it overwrites the oldest contact based on count
-void    phonebook::add(void)
-{
-
-}
-
-// void    ft_command(std::string input, phonebook pb)
-// {
-// 	if (input == "ADD")
-// 		pb.add();
-// 	else if (input == "SEARCH")
-// 		pb.search();
-// 	else
-// 		std::cout << "Invalid command.\n";
-// }
 
 std::string ft_clean_spaces(std::string str)
 {
