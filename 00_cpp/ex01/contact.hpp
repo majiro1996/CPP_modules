@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/16 15:59:37 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/18 18:17:09 by manujime         ###   ########.fr       */
+/*   Created: 2023/06/18 18:16:01 by manujime          #+#    #+#             */
+/*   Updated: 2023/06/18 18:16:57 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
 # include <iostream>
 # include <string>
-# include "contact.hpp"
 
-//phonebook class
-class   phonebook
+//contact class
+class   contact
 {
     public:
-        //phonebook(void);
-        //~phonebook(void);
-        void    init(void);
+        //contact(void);
+        //~contact(void);
         void    add(void);
-        void    print(void);
         void    search(void);
         void    exit(void);
     private:
-        contact	contacts[8];
-        int		count;
+        int        index;
+        std::string first_name;
+        std::string last_name;
+        std::string nickname;
+        std::string phone_number;
+        std::string darkest_secret;
 };
 
 #endif
