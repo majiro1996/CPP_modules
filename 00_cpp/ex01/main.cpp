@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 18:18:44 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/18 18:20:23 by manujime         ###   ########.fr       */
+/*   Updated: 2023/06/19 18:23:07 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main(void)
 			pb.add();
 		else if (input.compare("SEARCH"))
 		{
-			pb.print();
+			pb.list();
 			pb.search();
 		}
 		else if (input.compare("EXIT"))

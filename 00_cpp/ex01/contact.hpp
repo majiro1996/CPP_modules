@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 18:16:01 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/18 18:16:57 by manujime         ###   ########.fr       */
+/*   Updated: 2023/06/19 20:01:46 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,14 @@
 class   contact
 {
     public:
-        //contact(void);
-        //~contact(void);
-        void    add(void);
-        void    search(void);
-        void    exit(void);
+        contact(void);
+        ~contact(void);
+        void            in(void);
+        void            out(void);
+        void            init(void);
+        std::string     get_first_name(void);
     private:
-        int        index;
+        int         index;
         std::string first_name;
         std::string last_name;
         std::string nickname;
