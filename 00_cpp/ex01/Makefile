@@ -6,7 +6,7 @@
 #    By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/09 22:40:46 by manujime          #+#    #+#              #
-#    Updated: 2023/06/08 12:09:22 by manujime         ###   ########.fr        #
+#    Updated: 2023/06/20 11:19:21 by manujime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ RED			=		\033[0;31m
 END			=		\033[0m
 
 SRC =   phonebook.cpp \
+		contact.cpp	\
+		main.cpp \
 
 OBJ = $(SRC:.cpp=.o)
 

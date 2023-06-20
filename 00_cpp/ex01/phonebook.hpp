@@ -6,15 +6,13 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 15:59:37 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/19 18:23:38 by manujime         ###   ########.fr       */
+/*   Updated: 2023/06/20 13:09:57 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include <iostream>
-# include <string>
 # include "contact.hpp"
 
 //phonebook class

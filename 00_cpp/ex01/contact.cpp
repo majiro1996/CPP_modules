@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 18:18:56 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/19 20:58:05 by manujime         ###   ########.fr       */
+/*   Updated: 2023/06/20 13:02:14 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,11 @@ contact::contact(void)
 	this->darkest_secret = "";
 }
 
+//destructor
+contact::~contact(void)
+{
+}
+
 //this function of the contact class pompts the user to enter the contact's
 //information, and stores it in the class' private variables
 void    contact::in(void)
@@ -35,6 +40,8 @@ void    contact::in(void)
 	std::cin >> this->nickname;
 	std::cout << "Phone number: ";
 	std::cin >> this->phone_number;
+	std::cout << "Darkest secret: ";
+	std::cin >> this->darkest_secret;
 	std::cout << this->first_name << " " << this->last_name << " has been added to the phonebook\n";
 }
 
@@ -46,6 +53,23 @@ void	contact::out()
 	std::cout << "Nickname: " << this->nickname << std::endl;
 	std::cout << "Phone number: " << this->phone_number << std::endl;
 	std::cout << "Darkest secret: " << this->darkest_secret << std::endl;
+}
+
+void	contact::list()
+{
+	if (this->first_name.length() > 10)
+		std::cout << this->first_name.substr(0, 9) << ".|";
+	else
+		std::cout << std::setw(10) << this->first_name << "|";
+	if (this->last_name.length() > 10)
+		std::cout << this->last_name.substr(0, 9) << ".|";
+	else
+		std::cout << std::setw(10) << this->last_name << "|";
+	if (this->nickname.length() > 10)
+		std::cout << this->nickname.substr(0, 9) << ".|";
+	else
+		std::cout << std::setw(10) << this->nickname << "|";
+	std::cout << std::endl;
 }
 
 std::string		contact::get_first_name(void)

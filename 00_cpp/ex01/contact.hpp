@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 18:16:01 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/19 20:01:46 by manujime         ###   ########.fr       */
+/*   Updated: 2023/06/20 13:09:45 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <iomanip>
 
 //contact class
 class   contact
@@ -24,7 +25,7 @@ class   contact
         ~contact(void);
         void            in(void);
         void            out(void);
-        void            init(void);
+        void            list(void);
         std::string     get_first_name(void);
     private:
         int         index;

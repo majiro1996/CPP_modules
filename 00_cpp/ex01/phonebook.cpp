@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 12:10:01 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/19 20:16:44 by manujime         ###   ########.fr       */
+/*   Updated: 2023/06/20 13:14:39 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,18 +50,22 @@ void	phonebook::list(void)
 	int i;
 
 	i = 0;
+	if (this->contacts[0].get_first_name() == "")
+	{
+		std::cout << "No contacts to display." << std::endl;
+		return ;
+	}
 	std::cout << "     index|first name| last name|  nickname" << std::endl;
 	while (i < 8)
 	{
 		if (this->contacts[i].get_first_name() != "")
 		{
 			std::cout << "         " << i << "|";
-			this->contacts[i].out();
+			this->contacts[i].list();
 		}
 		i++;
 	}
-	if (this->contacts[0].get_first_name() == "")
-		std::cout << "No contacts to display." << std::endl;
+	this->search();
 }
 
 void	phonebook::search(void)
@@ -92,7 +96,6 @@ void	phonebook::search(void)
 //this function prints the initial prompt for the user to enter a command
 void    phonebook::init(void)
 {
-	std::cout << "Welcome to the phonebook!\n";
 	std::cout << "Please enter a command:\n";
 	std::cout << "ADD, SEARCH, EXIT\n";
 }

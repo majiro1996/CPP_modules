@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 18:18:44 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/19 18:23:07 by manujime         ###   ########.fr       */
+/*   Updated: 2023/06/20 13:14:36 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,26 +26,26 @@ int main(void)
 {
 	phonebook pb;
 	std::string input;
-	phonebook   pb;
 
 	input = "";
-	pb.init();
-	while (input.compare("EXIT"))
+	std::cout << "Welcome to the phonebook!\n";
+	while (input.compare("EXIT") != 0)
 	{
+		pb.init();
 		std::cin >> input;
 		input = ft_clean_spaces(input);
-		if (input.compare("ADD"))
+		if (!input.compare("ADD"))
 			pb.add();
-		else if (input.compare("SEARCH"))
-		{
+		else if (!input.compare("SEARCH"))
 			pb.list();
-			pb.search();
-		}
-		else if (input.compare("EXIT"))
+		else if (!input.compare("EXIT"))
+		{
 			pb.exit();
+			return (0);
+		}
+
 		else
 			std::cout << "Invalid command. Try again please\n";
-		std::cout << "You entered: " << input << "\n";
 	}
 	return (0);
 }
