@@ -6,7 +6,7 @@
 #    By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/09 22:40:46 by manujime          #+#    #+#              #
-#    Updated: 2023/06/22 18:04:08 by manujime         ###   ########.fr        #
+#    Updated: 2023/06/22 15:17:09 by manujime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,14 +18,13 @@ RED			=		\033[0;31m
 END			=		\033[0m
 
 SRC =	main.cpp \
-		newZombie.cpp \
-		randomChump.cpp \
-		Zombie.cpp
+		Zombie.cpp \
+		zombieHorde.cpp
 
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = brainz
+NAME = moarbraiz
 
 all: $(NAME)
 	
