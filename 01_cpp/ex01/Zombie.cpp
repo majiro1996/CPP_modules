@@ -6,15 +6,14 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 10:51:03 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/22 15:05:43 by manujime         ###   ########.fr       */
+/*   Updated: 2023/06/26 10:52:59 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name)
+Zombie::Zombie(void)
 {
-    this->_name = name;
 }
 
 Zombie::~Zombie(void)
@@ -25,4 +24,9 @@ Zombie::~Zombie(void)
 void    Zombie::announce(void)
 {
     std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void    Zombie::setName(std::string name)
+{
+    this->_name = name;
 }
