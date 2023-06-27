@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 14:28:09 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/27 15:10:35 by manujime         ###   ########.fr       */
+/*   Updated: 2023/06/27 15:50:52 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int main(int argc, char **argv)
 	if (argc != 4)
 	{
 		std::cout << "Error: wrong number of arguments" << std::endl;
+		std::cout << "Usage: ./sed <filename> <s1> <s2>" << std::endl;
 		return (1);
 	}
 	std::string filename(argv[1]);
