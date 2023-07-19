@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 12:10:01 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/20 13:14:39 by manujime         ###   ########.fr       */
+/*   Updated: 2023/07/19 14:07:57 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	phonebook::search(void)
 	i = 0;
 	std::cout << "Please enter the index of the contact of your choice: ";
 	std::cin >> index;
-	if (!(index > 0 && index < 8))
+	if (!(index >= 0 && index < 8))
 	{
 		std::cout << "Invalid index.\n";
 		this->search();

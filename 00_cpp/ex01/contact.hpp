@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 18:16:01 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/20 13:09:45 by manujime         ###   ########.fr       */
+/*   Updated: 2023/07/19 14:08:52 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class   contact
         void            list(void);
         std::string     get_first_name(void);
     private:
-        int         index;
         std::string first_name;
         std::string last_name;
         std::string nickname;

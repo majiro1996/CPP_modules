@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 15:59:37 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/20 13:09:57 by manujime         ###   ########.fr       */
+/*   Updated: 2023/07/19 14:09:00 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class   phonebook
         void    exit(void);
     private:
         contact	contacts[8];
-        int		count;
 };
 
 #endif
