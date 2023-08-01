@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 18:18:56 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/01 13:00:03 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/01 14:04:24 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,21 +27,33 @@ contact::~contact(void)
 {
 }
 
+//cleans the cin buffer
+//fills a string with all the input from the user string
+std::string fill(void)
+{
+	std::string input;
+
+	std::cin.clear();
+	std::getline(std::cin, input);
+	return (input);
+}
+
 //this function of the contact class pompts the user to enter the contact's
 //information, and stores it in the class' private variables
 void    contact::in(void)
 {
 	std::cout << "Please enter the following information:\n";
 	std::cout << "First name: ";
-	std::cin >> this->first_name;
+	std::cin.ignore();
+	this->first_name = fill();
 	std::cout << "Last name: ";
-	std::cin >> this->last_name;
+	this->last_name = fill();
 	std::cout << "Nickname: ";
-	std::cin >> this->nickname;
+	this->nickname = fill();
 	std::cout << "Phone number: ";
-	std::cin >> this->phone_number;
+	this->phone_number = fill();
 	std::cout << "Darkest secret: ";
-	std::cin >> this->darkest_secret;
+	this->darkest_secret = fill();
 	std::cout << this->first_name << " " << this->last_name << " has been added to the phonebook\n";
 }
 
