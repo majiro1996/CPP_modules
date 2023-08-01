@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 18:18:56 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/01 14:04:24 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/01 14:18:53 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void    contact::in(void)
 	std::cout << this->first_name << " " << this->last_name << " has been added to the phonebook\n";
 }
 
-//prints contact info
+//prints the contact info
 void	contact::out()
 {
 	std::cout << "First name: " << this->first_name << std::endl;
@@ -67,6 +67,9 @@ void	contact::out()
 	std::cout << "Darkest secret: " << this->darkest_secret << std::endl;
 }
 
+//prints contact info in a list format
+//if the string is longer than 10 characters, it prints the first 9 characters and a dot
+//if the string is shorter than 10 characters, it prints the string adding spaces to reach 10 characters
 void	contact::list()
 {
 	if (this->first_name.length() > 10)
