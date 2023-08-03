@@ -29,5 +29,5 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	replace(filename, s1, s2);
+	replacer(filename, s1, s2);
 }

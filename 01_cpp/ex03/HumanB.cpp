@@ -12,9 +12,9 @@
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : _name(name)
+HumanB::HumanB(std::string name) : name(name)
 {
-	this->_weapon = NULL;
+	this->weapon = NULL;
 	return ;
 }
 
@@ -25,15 +25,15 @@ HumanB::~HumanB(void)
 
 void	HumanB::attack(void)
 {
-	if (this->_weapon == NULL)
-		std::cout << this->_name << " has no weapon!" << std::endl;
+	if (this->weapon == NULL)
+		std::cout << this->name << " has no weapon!" << std::endl;
 	else
-	std::cout << this->_name << " attacks with their " << this->_weapon->getType() << std::endl;
+	std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
 	return ;
 }
 
 void	HumanB::setWeapon(Weapon& weapon)
 {
-	this->_weapon = &weapon;
+	this->weapon = &weapon;
 	return ;
 }

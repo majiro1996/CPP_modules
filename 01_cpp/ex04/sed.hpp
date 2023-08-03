@@ -16,6 +16,6 @@
 # include <iostream>
 # include <fstream>
 
-void replace(std::string filename, std::string s1, std::string s2);
+void replacer(std::string filename, std::string s1, std::string s2);
 
 #endif

@@ -15,12 +15,14 @@
 
 # include <string>
 # include <iostream>
+# include <sstream>
 
 class Zombie
 {
     private:
-        std::string	_name;
+        std::string	name;
     public:
+        Zombie(std::string name);
         Zombie(void);
         ~Zombie(void);
         void	announce(void);

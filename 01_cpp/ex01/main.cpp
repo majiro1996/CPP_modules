@@ -11,6 +11,45 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <cstdlib>
+
+int getZombieNumber(void)
+{
+    int N;
+
+    std::cout << "How many zombies do you want to create?" << std::endl;
+    if (!(std::cin >> N))
+    {
+        if (std::cin.eof())
+            exit(0);
+        std::cout << "Invalid input. Try again." << std::endl;
+        std::cin.clear();
+        std::cin.ignore(10000, '\n');
+        return (getZombieNumber());
+    }
+    std::cin.clear();
+    std::cin.ignore(10000, '\n');
+    return (N);
+}
+
+std::string getZombieName(void)
+{
+    std::string name;
+
+    std::cout << "What name do you want to give them?" << std::endl;
+    if (!(std::getline(std::cin, name)))
+    {
+        if (std::cin.eof())
+            exit(0);
+        std::cout << "Invalid input. Try again." << std::endl;
+        std::cin.clear();
+        std::cin.ignore(10000, '\n');
+        return (getZombieName());
+    }
+    std::cin.clear();
+    std::cin.ignore(10000, '\n');
+    return (name);
+}
 
 int main(void)
 {
@@ -18,8 +57,8 @@ int main(void)
     int		N;
     std::string	name;
 
-    N = 5; 
-    name = "Zombie";
+    N = getZombieNumber();
+    name = getZombieName();
     horde = zombieHorde(N, name);
     for (int i = 0; i < N; i++)
         horde[i].announce();

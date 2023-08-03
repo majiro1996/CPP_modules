@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   replace.cpp                                        :+:      :+:    :+:   */
+/*   replacer.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,21 +12,21 @@
 
 #include "sed.hpp"
 
-void replace(std::string filename, std::string s1, std::string s2)
+void replacer(std::string filename, std::string s1, std::string s2)
 {
 	std::string line;
 	std::ifstream infile;
 	std::ofstream outfile;
 	size_t pos;
 
-	infile.open(filename);
+	infile.open(filename.c_str());
 	if (!infile.is_open())
 	{
 		std::cout << "Error: " << filename << " not found" << std::endl;
 		return ;
 	}
 	filename.append(".replace");
-	outfile.open(filename);
+	outfile.open(filename.c_str());
 	while (std::getline(infile, line))
 	{
 		pos = line.find(s1);
@@ -34,7 +34,7 @@ void replace(std::string filename, std::string s1, std::string s2)
 		{
 			line.erase(pos, s1.length());
 			line.insert(pos, s2);
-			pos = line.find(s1);
+			pos = line.find(s1); 
 		}
 		outfile << line << std::endl;
 	}

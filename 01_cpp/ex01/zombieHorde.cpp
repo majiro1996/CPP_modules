@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 15:17:30 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/26 10:57:20 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/03 12:41:08 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,16 @@
 Zombie* zombieHorde( int N, std::string name )
 {
 	Zombie	*horde;
+	std::stringstream ss;
 	int		i;
 
 	i = 0;
 	horde = new Zombie[N];
 	while (i < N)
 	{
-		horde[i].setName(name + std::to_string(i));
+		ss << name << i;
+		horde[i].setName(ss.str());
+		ss.str("");
 		i++;
 	}
 	return (horde);
