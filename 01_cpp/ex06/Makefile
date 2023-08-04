@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 CC = g++
-CFLAGS = -Wall -Wextra -Werror -g -std=c++98
+CFLAGS = -Wall -Wextra -Werror -g -Wimplicit-fallthrough=0 -std=c++98
 
 GREEN		=		\033[0;32m
 RED			=		\033[0;31m
@@ -22,7 +22,7 @@ SRC =	main.cpp \
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = Harl
+NAME = harlFilter
 
 all: $(NAME)
 	

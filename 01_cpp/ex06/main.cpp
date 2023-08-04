@@ -12,14 +12,17 @@
 
 #include "Harl.hpp"
 
-int main(void)
+int main(int argc, char **argv)
 {
 	Harl harl;
-
-	harl.complain("debug");
-	harl.complain("info");
-	harl.complain("warning");
-	harl.complain("error");
-	harl.complain("random");
+	
+	if (argc != 2)
+	{
+		std::cout << "Usage: ./harlFilter <level>" << std::endl;
+		std::cout << "Valid levels: DEBUG, INFO, WARNING, ERROR" << std::endl;
+		return (0);
+	}
+	
+	harl.complain(argv[1]);
 	return (0);
 }
