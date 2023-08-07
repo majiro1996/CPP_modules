@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:14:39 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/26 18:42:15 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/07 13:22:46 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	HumanB::attack(void)
 	return ;
 }
 
-void	HumanB::setWeapon(Weapon& weapon)
+void	HumanB::setWeapon(Weapon &weapon)
 {
 	this->weapon = &weapon;
 	return ;

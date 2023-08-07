@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 14:38:12 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/26 10:58:37 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/07 13:09:44 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ std::string getZombieName(void)
         std::cin.ignore(10000, '\n');
         return (getZombieName());
     }
-    std::cin.clear();
-    std::cin.ignore(10000, '\n');
     return (name);
 }
 

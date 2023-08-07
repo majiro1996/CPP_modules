@@ -6,12 +6,12 @@
 #    By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/09 22:40:46 by manujime          #+#    #+#              #
-#    Updated: 2023/06/27 16:23:11 by manujime         ###   ########.fr        #
+#    Updated: 2023/08/07 13:37:54 by manujime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = g++
-CFLAGS = -Wall -Wextra -Werror -g -Wimplicit-fallthrough=0 -std=c++98
+CFLAGS = -Wall -Wextra -Werror -g -std=c++98 
 
 GREEN		=		\033[0;32m
 RED			=		\033[0;31m

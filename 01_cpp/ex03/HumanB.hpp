@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:14:43 by manujime          #+#    #+#             */
-/*   Updated: 2023/06/26 18:38:25 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/07 13:23:15 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class HumanB
 		HumanB(std::string name);
 		~HumanB(void);
 		void	attack(void);
-		void	setWeapon(Weapon& weapon);
+		void	setWeapon(Weapon &weapon);
 	private:
 		std::string	name;
 		Weapon		*weapon;
