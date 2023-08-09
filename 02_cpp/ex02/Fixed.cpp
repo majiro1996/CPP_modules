@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 20:45:55 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/09 14:25:31 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/09 20:54:37 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,109 @@ std::ostream &operator<<(std::ostream &out, const Fixed &source)
 {
     out << source.toFloat();
     return out;
+}
+
+// Comparison operators
+bool Fixed::operator>(const Fixed &source) const
+{
+    return this->value > source.getRawBits();
+}
+
+bool Fixed::operator<(const Fixed &source) const
+{
+    return this->value < source.getRawBits();
+}
+
+bool Fixed::operator>=(const Fixed &source) const
+{
+    return this->value >= source.getRawBits();
+}
+
+bool Fixed::operator<=(const Fixed &source) const
+{
+    return this->value <= source.getRawBits();
+}
+
+bool Fixed::operator==(const Fixed &source) const
+{
+    return this->value == source.getRawBits();
+}
+
+bool Fixed::operator!=(const Fixed &source) const
+{
+    return this->value != source.getRawBits();
+}
+
+// Arithmetic operators
+Fixed Fixed::operator+(const Fixed &source) const
+{
+    return Fixed(this->toFloat() + source.toFloat());
+}
+
+Fixed Fixed::operator-(const Fixed &source) const
+{
+    return Fixed(this->toFloat() - source.toFloat());
+}
+
+Fixed Fixed::operator*(const Fixed &source) const
+{
+    return Fixed(this->toFloat() * source.toFloat());
+}
+
+Fixed Fixed::operator/(const Fixed &source) const
+{
+    return Fixed(this->toFloat() / source.toFloat());
+}
+
+// Increment operators
+Fixed &Fixed::operator++(void)
+{
+    this->value++;
+    return *this;
+}
+
+Fixed Fixed::operator++(int)
+{
+    Fixed tmp(*this);
+    operator++();
+    return tmp;
+}
+
+// Decrement operators
+Fixed &Fixed::operator--(void)
+{
+    this->value--;
+    return *this;
+}
+
+Fixed Fixed::operator--(int)
+{
+    Fixed tmp(*this);
+    operator--();
+    return tmp;
+}
+
+// Min and max functions
+Fixed &Fixed::min(Fixed &a, Fixed &b)
+{
+    return a < b ? a : b;
+}
+
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
+{
+    return a < b ? a : b;
+}
+
+Fixed &Fixed::max(Fixed &a, Fixed &b)
+{
+    if (a > b)
+        return a;
+    return b;
+}
+
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
+{
+    if (a > b)
+        return a;
+    return b;
 }

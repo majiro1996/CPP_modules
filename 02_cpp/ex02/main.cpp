@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 20:46:01 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/09 14:39:07 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/09 22:42:22 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,17 @@
 int main(void) 
 {
     Fixed a;
-    Fixed b(10);
-    Fixed c(42.42f);
-    Fixed d(b);
+    Fixed const b (Fixed(5.05f) * Fixed(2));
 
-    a = Fixed(1234.4321f);
+    std::cout << a << std::endl;
+    std::cout << ++a << std::endl;
+    std::cout << a << std::endl;
+    std::cout << a++ << std::endl;
+    std::cout << a << std::endl;
 
-    std::cout << "a is " << a << std::endl;
-    std::cout << "b is " << b << std::endl;
-    std::cout << "c is " << c << std::endl;
-    std::cout << "d is " << d << std::endl;
+    std::cout << b << std::endl;
 
-    std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-    std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-    std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-    std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+    std::cout << Fixed::max(a, b) << std::endl;
 
     return 0;
 }

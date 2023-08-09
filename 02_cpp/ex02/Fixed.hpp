@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 20:45:58 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/09 14:33:13 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/09 20:50:41 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,32 @@ class Fixed
         ~Fixed(void);
         
         Fixed   &operator=(const Fixed &source);
+        bool    operator>(const Fixed &source) const;
+        bool    operator<(const Fixed &source) const;
+        bool    operator>=(const Fixed &source) const;
+        bool    operator<=(const Fixed &source) const;
+        bool    operator==(const Fixed &source) const;
+        bool    operator!=(const Fixed &source) const;
+
+        Fixed   operator+(const Fixed &source) const;
+        Fixed   operator-(const Fixed &source) const;
+        Fixed   operator*(const Fixed &source) const;
+        Fixed   operator/(const Fixed &source) const;
+        
+        Fixed   &operator++(void);
+        Fixed   operator++(int);
+        Fixed   &operator--(void);
+        Fixed   operator--(int);
+        
         int     getRawBits(void) const;
         void    setRawBits(int const raw);
         float   toFloat(void) const;
         int     toInt(void) const;
+
+        static Fixed          &min(Fixed &a, Fixed &b);
+        static Fixed          &max(Fixed &a, Fixed &b);
+        static const Fixed    &min(const Fixed &a, const Fixed &b);
+        static const Fixed    &max(const Fixed &a, const Fixed &b);
 
     private:
         int          value;
