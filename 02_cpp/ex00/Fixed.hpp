@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/27 16:23:21 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/06 20:45:08 by manujime         ###   ########.fr       */
+/*   Created: 2023/08/06 20:45:58 by manujime          #+#    #+#             */
+/*   Updated: 2023/08/07 23:41:50 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef FIXED_H
+# define FIXED_H
 
-int main(int argc, char **argv)
+# include <iostream>
+
+class Fixed
 {
-	Harl harl;
-	
-	if (argc != 2)
-	{
-		std::cout << "Usage: ./harlFilter <level>" << std::endl;
-		std::cout << "Valid levels: DEBUG, INFO, WARNING, ERROR" << std::endl;
-		return (0);
-	}
-	
-	harl.complain(argv[1]);
-	return (0);
-}
+    public:
+        Fixed(void);
+        Fixed(const Fixed &source);
+        Fixed &operator=(const Fixed &source);
+        ~Fixed(void);
+        int getRawBits(void) const;
+        void setRawBits(int const raw);
+    
+    private:
+        int value;
+        static const int bits = 8; 
+};
+
+# endif

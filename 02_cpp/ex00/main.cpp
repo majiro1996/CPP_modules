@@ -5,24 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/27 16:23:21 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/06 20:45:08 by manujime         ###   ########.fr       */
+/*   Created: 2023/08/06 20:46:01 by manujime          #+#    #+#             */
+/*   Updated: 2023/08/07 21:49:48 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "Fixed.hpp"
+#include <iostream>
 
-int main(int argc, char **argv)
+int main(void) 
 {
-	Harl harl;
-	
-	if (argc != 2)
-	{
-		std::cout << "Usage: ./harlFilter <level>" << std::endl;
-		std::cout << "Valid levels: DEBUG, INFO, WARNING, ERROR" << std::endl;
-		return (0);
-	}
-	
-	harl.complain(argv[1]);
-	return (0);
+    Fixed a;
+    Fixed b(a);
+    Fixed c;
+    c = b;
+    std::cout << a.getRawBits() << std::endl;
+    std::cout << b.getRawBits() << std::endl;
+    std::cout << c.getRawBits() << std::endl;
+    return 0;
 }
