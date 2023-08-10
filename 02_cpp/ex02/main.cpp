@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 20:46:01 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/09 22:42:22 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/10 14:06:06 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ int main(void)
 
     std::cout << Fixed::max(a, b) << std::endl;
 
+    
     return 0;
 }

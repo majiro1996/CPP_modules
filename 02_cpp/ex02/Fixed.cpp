@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 20:45:55 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/09 20:54:37 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/10 12:35:55 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,16 +136,17 @@ Fixed Fixed::operator/(const Fixed &source) const
 }
 
 // Increment operators
-Fixed &Fixed::operator++(void)
+Fixed &Fixed::operator++(void) // prefix
 {
     this->value++;
     return *this;
 }
 
-Fixed Fixed::operator++(int)
+Fixed Fixed::operator++(int) // postfix
 {
     Fixed tmp(*this);
-    operator++();
+    
+    tmp.value++;
     return tmp;
 }
 
@@ -159,31 +160,32 @@ Fixed &Fixed::operator--(void)
 Fixed Fixed::operator--(int)
 {
     Fixed tmp(*this);
-    operator--();
+
+    tmp.value--;
     return tmp;
 }
 
 // Min and max functions
 Fixed &Fixed::min(Fixed &a, Fixed &b)
 {
-    return a < b ? a : b;
+    return a.getRawBits() < b.getRawBits() ? a : b;
 }
 
 const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
 {
-    return a < b ? a : b;
+    return a.getRawBits() < b.getRawBits() ? a : b;
 }
 
 Fixed &Fixed::max(Fixed &a, Fixed &b)
 {
-    if (a > b)
+    if (a.getRawBits() > b.getRawBits())
         return a;
     return b;
 }
 
 const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
 {
-    if (a > b)
+    if (a.getRawBits() > b.getRawBits())
         return a;
     return b;
 }
