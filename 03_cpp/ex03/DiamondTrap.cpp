@@ -1,28 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/27 16:23:21 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/06 20:45:08 by manujime         ###   ########.fr       */
+/*   Created: 2023/08/14 16:21:36 by manujime          #+#    #+#             */
+/*   Updated: 2023/08/14 16:31:08 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
-
-int main(int argc, char **argv)
-{
-	Harl harl;
-	
-	if (argc != 2)
-	{
-		std::cout << "Usage: ./harlFilter <level>" << std::endl;
-		std::cout << "Valid levels: DEBUG, INFO, WARNING, ERROR" << std::endl;
-		return (0);
-	}
-	
-	harl.complain(argv[1]);
-	return (0);
-}
+#include "DiamondTrap.hpp"

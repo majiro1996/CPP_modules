@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/27 16:23:21 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/06 20:45:08 by manujime         ###   ########.fr       */
+/*   Created: 2023/08/10 22:24:59 by manujime          #+#    #+#             */
+/*   Updated: 2023/08/11 13:29:03 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef FRAGTRAP_H
+# define FRAGTRAP_H
 
-int main(int argc, char **argv)
+#include "ClapTrap.hpp"
+
+# define FRAG_HP 100
+# define FRAG_EP 100
+# define FRAG_AD 30
+
+class FragTrap : public ClapTrap
 {
-	Harl harl;
-	
-	if (argc != 2)
-	{
-		std::cout << "Usage: ./harlFilter <level>" << std::endl;
-		std::cout << "Valid levels: DEBUG, INFO, WARNING, ERROR" << std::endl;
-		return (0);
-	}
-	
-	harl.complain(argv[1]);
-	return (0);
-}
+    public:
+        FragTrap(void);
+        FragTrap(std::string name);
+        ~FragTrap(void);
+
+        void    highFivesGuys(void);
+        void    attack(std::string const & target);
+
+};
+
+#endif

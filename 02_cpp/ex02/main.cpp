@@ -5,24 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/27 16:23:21 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/06 20:45:08 by manujime         ###   ########.fr       */
+/*   Created: 2023/08/06 20:46:01 by manujime          #+#    #+#             */
+/*   Updated: 2023/08/10 14:06:06 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "Fixed.hpp"
+#include <iostream>
 
-int main(int argc, char **argv)
+int main(void) 
 {
-	Harl harl;
-	
-	if (argc != 2)
-	{
-		std::cout << "Usage: ./harlFilter <level>" << std::endl;
-		std::cout << "Valid levels: DEBUG, INFO, WARNING, ERROR" << std::endl;
-		return (0);
-	}
-	
-	harl.complain(argv[1]);
-	return (0);
+    Fixed a;
+    Fixed const b (Fixed(5.05f) * Fixed(2));
+
+    std::cout << a << std::endl;
+    std::cout << ++a << std::endl;
+    std::cout << a << std::endl;
+    std::cout << a++ << std::endl;
+    std::cout << a << std::endl;
+
+    std::cout << b << std::endl;
+
+    std::cout << Fixed::max(a, b) << std::endl;
+
+    
+    return 0;
 }

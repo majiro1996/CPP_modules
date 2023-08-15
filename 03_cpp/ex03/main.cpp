@@ -5,24 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/27 16:23:21 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/06 20:45:08 by manujime         ###   ########.fr       */
+/*   Created: 2023/08/10 20:55:38 by manujime          #+#    #+#             */
+/*   Updated: 2023/08/11 13:34:21 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "FragTrap.hpp"
 
-int main(int argc, char **argv)
+int main(void)
 {
-	Harl harl;
-	
-	if (argc != 2)
-	{
-		std::cout << "Usage: ./harlFilter <level>" << std::endl;
-		std::cout << "Valid levels: DEBUG, INFO, WARNING, ERROR" << std::endl;
-		return (0);
-	}
-	
-	harl.complain(argv[1]);
-	return (0);
+    FragTrap    frag("Frag");
+
+    frag.attack("target");
+    frag.highFivesGuys();
+    frag.takeDamage(10);
+    frag.beRepaired(10);
+    
+    return (0);
 }

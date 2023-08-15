@@ -5,28 +5,24 @@
 #                                                     +:+ +:+         +:+      #
 #    By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/05/09 22:40:46 by manujime          #+#    #+#              #
-<<<<<<< HEAD
-#    Updated: 2023/08/07 13:37:54 by manujime         ###   ########.fr        #
-=======
-#    Updated: 2023/08/06 20:45:14 by manujime         ###   ########.fr        #
->>>>>>> 1cacdcd046ead6a573b9f0707890a21434aec972
+#    Created: 2023/08/06 20:44:21 by manujime          #+#    #+#              #
+#    Updated: 2023/08/08 14:25:58 by manujime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = g++
-CFLAGS = -Wall -Wextra -Werror -g -std=c++98 
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
 GREEN		=		\033[0;32m
 RED			=		\033[0;31m
 END			=		\033[0m
 
 SRC =	main.cpp \
-		Harl.cpp \
+		Fixed.cpp \
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = harlFilter
+NAME = Fixed
 
 all: $(NAME)
 	
@@ -50,4 +46,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-

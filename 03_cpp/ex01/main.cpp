@@ -5,24 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/27 16:23:21 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/06 20:45:08 by manujime         ###   ########.fr       */
+/*   Created: 2023/08/10 20:55:38 by manujime          #+#    #+#             */
+/*   Updated: 2023/08/11 12:15:01 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "ScavTrap.hpp"
 
-int main(int argc, char **argv)
+int main(void)
 {
-	Harl harl;
-	
-	if (argc != 2)
-	{
-		std::cout << "Usage: ./harlFilter <level>" << std::endl;
-		std::cout << "Valid levels: DEBUG, INFO, WARNING, ERROR" << std::endl;
-		return (0);
-	}
-	
-	harl.complain(argv[1]);
-	return (0);
+    ScavTrap    scav("Scav");
+
+    scav.attack("target");
+    scav.guardGate();
+    scav.takeDamage(SCAV_AD);
+    scav.beRepaired(10);
+
+    return (0);
 }
