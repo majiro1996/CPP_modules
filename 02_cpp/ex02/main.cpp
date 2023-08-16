@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 20:46:01 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/10 14:06:06 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/16 18:57:39 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,13 @@ int main(void)
     std::cout << b << std::endl;
 
     std::cout << Fixed::max(a, b) << std::endl;
-
+    std::cout << Fixed::min(a, b) << std::endl;
     
+    std::cout << a + b << std::endl;
+    std::cout << b - a << std::endl;
+    std::cout << a / b << std::endl;
+    std::cout << a * b << std::endl;
+    std::cout << a-- << std::endl;
+    std::cout << --a << std::endl;
     return 0;
 }
