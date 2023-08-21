@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 13:03:52 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/21 14:06:14 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/21 16:28:04 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ int		main(void)
 		delete animals[i];
 		std::cout << i << std::endl;
 	}
-	
+
 	return (0);
 }
