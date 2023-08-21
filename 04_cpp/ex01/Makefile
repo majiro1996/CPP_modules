@@ -6,7 +6,7 @@
 #    By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/10 15:48:48 by manujime          #+#    #+#              #
-#    Updated: 2023/08/21 13:13:54 by manujime         ###   ########.fr        #
+#    Updated: 2023/08/21 13:32:40 by manujime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRC =	main.cpp \
 		Dog.cpp \
 		Cat.cpp \
 		WrongAnimal.cpp \
-		WrongCat.cpp
+		WrongCat.cpp \
+		Brain.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

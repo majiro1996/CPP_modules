@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 13:02:27 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/21 13:03:12 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/21 13:44:37 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Cat::Cat(void) : Animal()
 {
+	_brain = new Brain();
 	_type = "Cat";
 	std::cout << "Cat default constructor called" << std::endl;
 }
@@ -26,6 +27,7 @@ Cat::Cat(Cat const &source)
 
 Cat::~Cat(void)
 {
+	delete _brain;
 	std::cout << "Cat destructor called" << std::endl;
 }
 

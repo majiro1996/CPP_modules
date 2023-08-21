@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 12:54:45 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/21 13:02:23 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/21 13:43:27 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class Dog : public Animal
 		Dog		&operator=(Dog const &source);
 
 		void	makeSound(void) const;
+	
+	private:
+		Brain	*_brain;
 };
 
 #endif

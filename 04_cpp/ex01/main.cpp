@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 13:03:52 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/21 13:22:57 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/21 13:45:42 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
+#include "Brain.hpp"
 
 int		main(void)
 {
