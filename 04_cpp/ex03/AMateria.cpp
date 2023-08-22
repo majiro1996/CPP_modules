@@ -6,11 +6,16 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 11:28:45 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/22 11:35:01 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/22 16:28:13 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+
+AMateria::AMateria(void)
+{
+	
+}
 
 AMateria::AMateria(std::string const &type)
 {
@@ -44,9 +49,4 @@ std::string const	&AMateria::getType(void) const
 void				AMateria::use(ICharacter &target)
 {
 	(void)target;
-}
-
-AMateria			*AMateria::clone(void) const
-{
-	return (new AMateria(*this));
 }

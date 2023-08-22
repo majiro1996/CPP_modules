@@ -6,13 +6,14 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 13:55:06 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/22 14:03:22 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/22 16:19:27 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATERIASOURCE_H
 # define MATERIASOURCE_H
 
+# include "AMateria.hpp"
 # include "IMateriaSource.hpp"
 
 class MateriaSource : public IMateriaSource

@@ -6,7 +6,7 @@
 #    By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/10 15:48:48 by manujime          #+#    #+#              #
-#    Updated: 2023/08/21 17:05:37 by manujime         ###   ########.fr        #
+#    Updated: 2023/08/22 16:23:04 by manujime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,11 @@ RED			=		\033[0;31m
 END			=		\033[0m
 
 SRC =	main.cpp \
+		AMateria.cpp \
+		Character.cpp \
+		Cure.cpp \
+		Ice.cpp \
+		MateriaSource.cpp \
 
 OBJ = $(SRC:.cpp=.o)
 

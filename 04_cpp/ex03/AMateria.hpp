@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 17:22:02 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/22 12:36:28 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/22 16:07:50 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,15 @@
 # include "ICharacter.hpp"
 # include <iostream>
 
+class ICharacter;
+
 class AMateria
 {
 	protected:
+		std::string	_type;
 
 	public:
+		AMateria(void);
 		AMateria(std::string const &type);
 		AMateria(AMateria const &source);
 		virtual ~AMateria(void);

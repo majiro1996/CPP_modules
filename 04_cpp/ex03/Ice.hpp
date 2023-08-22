@@ -6,13 +6,14 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 11:40:19 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/22 11:40:38 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/22 16:08:37 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICE_HPP
 # define ICE_HPP
 
+# include "AMateria.hpp"
 # include <iostream>
 
 class Ice : public AMateria
