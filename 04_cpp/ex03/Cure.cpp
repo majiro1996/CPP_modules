@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/22 11:28:45 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/22 11:35:01 by manujime         ###   ########.fr       */
+/*   Created: 2023/08/22 11:37:16 by manujime          #+#    #+#             */
+/*   Updated: 2023/08/22 11:39:48 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "Cure.hpp"
 
-AMateria::AMateria(std::string const &type)
-{
-	this->_type = type;
-}
-
-AMateria::AMateria(AMateria const &source)
-{
-	*this = source;
-}
-
-AMateria::~AMateria(void)
+Cure::Cure(void) : AMateria("cure")
 {
 	
 }
 
-AMateria	&AMateria::operator=(AMateria const &source)
+Cure::Cure(Cure const &source)
+{
+	*this = source;
+}
+
+Cure::~Cure(void)
+{
+	
+}
+
+Cure	&Cure::operator=(Cure const &source)
 {
 	if (this != &source)
 	{
@@ -36,17 +36,12 @@ AMateria	&AMateria::operator=(AMateria const &source)
 	return (*this);
 }
 
-std::string const	&AMateria::getType(void) const
+AMateria	*Cure::clone(void) const
 {
-	return (this->_type);
+	return (new Cure(*this));
 }
 
-void				AMateria::use(ICharacter &target)
+void		Cure::use(ICharacter &target)
 {
-	(void)target;
-}
-
-AMateria			*AMateria::clone(void) const
-{
-	return (new AMateria(*this));
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }

@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/22 11:28:45 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/22 11:35:01 by manujime         ###   ########.fr       */
+/*   Created: 2023/08/22 11:40:13 by manujime          #+#    #+#             */
+/*   Updated: 2023/08/22 11:44:17 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "Ice.hpp"
 
-AMateria::AMateria(std::string const &type)
-{
-	this->_type = type;
-}
-
-AMateria::AMateria(AMateria const &source)
-{
-	*this = source;
-}
-
-AMateria::~AMateria(void)
+Ice::Ice(void) : AMateria("ice")
 {
 	
 }
 
-AMateria	&AMateria::operator=(AMateria const &source)
+Ice::Ice(Ice const &source)
+{
+	*this = source;
+}
+
+Ice::~Ice(void)
+{
+	
+}
+
+Ice		&Ice::operator=(Ice const &source)
 {
 	if (this != &source)
 	{
@@ -36,17 +36,12 @@ AMateria	&AMateria::operator=(AMateria const &source)
 	return (*this);
 }
 
-std::string const	&AMateria::getType(void) const
+AMateria	*Ice::clone(void) const
 {
-	return (this->_type);
+	return (new Ice(*this));
 }
 
-void				AMateria::use(ICharacter &target)
+void		Ice::use(ICharacter &target)
 {
-	(void)target;
-}
-
-AMateria			*AMateria::clone(void) const
-{
-	return (new AMateria(*this));
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
