@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 10:48:55 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/15 10:57:13 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/24 18:01:30 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Point
 		Point(Point const & source);
 		~Point(void);
 
-		Point &	operator=(Point const & source);
+		Point &	operator=(const Point & source);
 
 		Fixed	getX(void) const;
 		Fixed	getY(void) const;

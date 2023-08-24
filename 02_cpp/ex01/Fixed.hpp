@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 20:45:58 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/09 14:33:13 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/24 11:43:58 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,5 @@ class Fixed
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &source);
+
 # endif

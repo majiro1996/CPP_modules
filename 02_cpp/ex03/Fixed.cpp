@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 20:45:55 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/10 12:35:55 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/24 18:25:50 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,53 +15,53 @@
 // Default constructor
 Fixed::Fixed(void) : value(0)
 {
-    std::cout << "Default constructor called" << std::endl;
+    //std::cout << "Default constructor called" << std::endl;
 }
 
 // Copy constructor
 Fixed::Fixed(const Fixed &source)
 {
-    std::cout << "Copy constructor called" << std::endl;
-    *this = source;
+    //std::cout << "Copy constructor called" << std::endl;
+    value = source.getRawBits();
 }
 
 // Destructor
 Fixed::~Fixed(void)
 {
-    std::cout << "Destructor called" << std::endl;
+    //std::cout << "Destructor called" << std::endl;
 }
 
 // Assignment operator
 Fixed &Fixed::operator=(const Fixed &source)
 {
-    std::cout << "copy assignment operator called" << std::endl;
+    //std::cout << "copy assignment operator called" << std::endl;
     this->value = source.getRawBits();
     return *this;
 }
 
 int Fixed::getRawBits(void) const
 {
-    std::cout << "getRawBits member function called" << std::endl;
+    //std::cout << "getRawBits member function called" << std::endl;
     return this->value;
 }
 
 void Fixed::setRawBits(int const raw)
 {
-    std::cout << "setRawBits member function called" << std::endl;
+    //std::cout << "setRawBits member function called" << std::endl;
     this->value = raw;
 }
 
 // Constructor from int
 Fixed::Fixed(const int val)
 {
-    std::cout << "Int constructor called" << std::endl;
+    //std::cout << "Int constructor called" << std::endl;
     this->value = val << this->bits;
 }
 
 // Constructor from float
 Fixed::Fixed(const float val)
 {
-    std::cout << "Float constructor called" << std::endl;
+    //std::cout << "Float constructor called" << std::endl;
     this->value = roundf(val * (1 << this->bits));
 }
 

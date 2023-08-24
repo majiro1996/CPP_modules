@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 20:45:58 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/07 23:41:50 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/24 11:31:02 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Fixed
     
     private:
         int value;
-        static const int bits = 8; 
+        static const int bits = 8;
 };
 
 # endif
