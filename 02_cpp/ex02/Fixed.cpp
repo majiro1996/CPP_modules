@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 20:45:55 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/10 12:35:55 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/24 18:42:54 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,7 +146,7 @@ Fixed Fixed::operator++(int) // postfix
 {
     Fixed tmp(*this);
     
-    tmp.value++;
+    this->value++;
     return tmp;
 }
 
@@ -161,7 +161,7 @@ Fixed Fixed::operator--(int)
 {
     Fixed tmp(*this);
 
-    tmp.value--;
+    this->value--;
     return tmp;
 }
 
