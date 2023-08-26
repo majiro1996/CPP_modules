@@ -6,11 +6,20 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 22:54:39 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/11 13:30:51 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/26 20:38:47 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+
+FragTrap::FragTrap(void)
+{
+    this->_name = "FragTrap";
+    this->_hitPoints = FRAG_HP;
+    this->_energyPoints = FRAG_EP;
+    this->_attackDamage = FRAG_AD;
+    std::cout << "FragTrap " << this->_name << " created." << std::endl;
+}
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
@@ -27,9 +36,20 @@ FragTrap::~FragTrap(void)
     std::cout << "FragTrap " << this->_name << " destroyed." << std::endl;
 }
 
+FragTrap    &FragTrap::operator=(FragTrap const &source)
+{
+    this->_name = source.getName();
+    this->_hitPoints = source.getHitPoints();
+    this->_energyPoints = source.getEnergyPoints();
+    this->_attackDamage = source.getAttackDamage();
+
+    std::cout << "FragTrap " << this->_name << " assigned." << std::endl;
+    return (*this);
+}
+
 void    FragTrap::highFivesGuys(void)
 {
-    std::cout << "FragTrap " << this->_name << " requests a high five!" << std::endl;
+    std::cout << "FragTrap " << this->_name << " reques a high five!" << std::endl;
 }
 
 void    FragTrap::attack(std::string const & target)
@@ -48,7 +68,3 @@ void    FragTrap::attack(std::string const & target)
     std::cout << "FragTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
 }
 
-FragTrap::FragTrap(void)
-{
-    std::cout << "FragTrap " << this->_name << " created." << std::endl;
-}

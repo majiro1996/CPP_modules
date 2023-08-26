@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 22:24:59 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/11 13:29:03 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/26 19:35:43 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ class FragTrap : public ClapTrap
         FragTrap(std::string name);
         ~FragTrap(void);
 
+        FragTrap &operator=(FragTrap const &source);
+
         void    highFivesGuys(void);
-        void    attack(std::string const & target);
+        void    attack(std::string const &target);
 
 };
 

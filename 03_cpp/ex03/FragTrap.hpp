@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 22:24:59 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/11 13:29:03 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/26 22:21:47 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,17 @@
 # define FRAG_EP 100
 # define FRAG_AD 30
 
-class FragTrap : public ClapTrap
+class FragTrap : public virtual ClapTrap
 {
     public:
         FragTrap(void);
         FragTrap(std::string name);
         ~FragTrap(void);
 
+        FragTrap &operator=(FragTrap const &source);
+
         void    highFivesGuys(void);
-        void    attack(std::string const & target);
+        void    attack(std::string const &target);
 
 };
 

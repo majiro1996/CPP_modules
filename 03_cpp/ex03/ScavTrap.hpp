@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 22:24:59 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/11 12:13:33 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/26 22:22:01 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,18 @@
 # define SCAV_EP 50
 # define SCAV_AD 20
 
-class ScavTrap : public ClapTrap
+class ScavTrap : public virtual ClapTrap
 {
     public:
         ScavTrap(void);
         ScavTrap(std::string name);
+        ScavTrap(ScavTrap const &source);
         ~ScavTrap(void);
 
+        ScavTrap &operator=(ScavTrap const &source);
+
         void    guardGate(void);
-        void    attack(std::string const & target);
+        void    attack(std::string const &target);
 
 };
 

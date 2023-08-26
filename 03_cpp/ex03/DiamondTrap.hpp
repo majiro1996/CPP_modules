@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 16:21:32 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/14 16:30:10 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/26 23:43:19 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,23 @@
 
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include <string>
 
 class DiamondTrap : public ScavTrap, public FragTrap
 {
     public:
-        DiamondTrap(DiamondTrap const &source); // copy constructor
-        DiamondTrap(std::string name); // constructor
-        ~DiamondTrap(void); // destructor
+        DiamondTrap(void);
+        DiamondTrap(DiamondTrap const &source);
+        DiamondTrap(std::string name);
+        ~DiamondTrap(void);
 
-        void    whoAmI(void); 
-        using   ScavTrap::attack; // using ScavTrap's attack method
-    
+        DiamondTrap &operator=(DiamondTrap const &source);
+
+        void    whoAmI(void);
+
+        using   ScavTrap::attack;
     private:
-        std::string _name;
+        //std::string _name;
 };
 
 #endif

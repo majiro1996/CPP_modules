@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 22:24:59 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/11 12:13:33 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/26 19:34:52 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,13 @@ class ScavTrap : public ClapTrap
     public:
         ScavTrap(void);
         ScavTrap(std::string name);
+        ScavTrap(ScavTrap const &source);
         ~ScavTrap(void);
 
+        ScavTrap &operator=(ScavTrap const &source);
+
         void    guardGate(void);
-        void    attack(std::string const & target);
+        void    attack(std::string const &target);
 
 };
 

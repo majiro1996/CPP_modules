@@ -6,7 +6,7 @@
 #    By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/10 15:48:48 by manujime          #+#    #+#              #
-#    Updated: 2023/08/11 13:26:34 by manujime         ###   ########.fr        #
+#    Updated: 2023/08/26 23:42:51 by manujime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC =	main.cpp \
 		ClapTrap.cpp \
 		ScavTrap.cpp \
 		FragTrap.cpp \
+		DiamondTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
