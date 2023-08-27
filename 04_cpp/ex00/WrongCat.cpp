@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 13:19:13 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/21 13:21:05 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/27 15:10:16 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ WrongCat::WrongCat(void) : WrongAnimal()
 	this->setType("WrongCat");
 }
 
-WrongCat::WrongCat(WrongCat const &source)
+WrongCat::WrongCat(WrongCat const &source) : WrongAnimal()
 {
 	std::cout << "WrongCat copy constructor called" << std::endl;
 	*this = source;

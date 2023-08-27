@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 13:02:27 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/21 13:03:12 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/27 15:09:49 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat(void) : Animal()
 	std::cout << "Cat default constructor called" << std::endl;
 }
 
-Cat::Cat(Cat const &source)
+Cat::Cat(Cat const &source) : Animal()
 {
 	std::cout << "Cat copy constructor called" << std::endl;
 	*this = source;

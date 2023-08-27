@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 12:56:50 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/21 13:00:33 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/27 15:09:28 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Dog::Dog(void) : Animal()
 	std::cout << "Dog default constructor called" << std::endl;
 }
 
-Dog::Dog(Dog const &source)
+Dog::Dog(Dog const &source) : Animal()
 {
 	std::cout << "Dog copy constructor called" << std::endl;
 	*this = source;

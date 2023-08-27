@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 13:15:54 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/21 13:17:32 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/27 15:06:11 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class WrongAnimal
 		std::string		getType(void) const;
 		void			setType(std::string type);
 
-		virtual void	makeSound(void) const;
+		void	makeSound(void) const;
 
 	protected:
 		std::string	_type;
