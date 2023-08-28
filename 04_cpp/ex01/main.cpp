@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 13:03:52 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/21 14:06:14 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/28 18:51:02 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int		main(void)
 			animals[i] = new Cat();
 		std::cout << i << std::endl;
 	}
+
+	*animals[0] = *animals[2];
 
 	for (int i = 0; i < 10; i++)
 	{
