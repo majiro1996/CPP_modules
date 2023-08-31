@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 13:02:27 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/27 17:43:59 by manujime         ###   ########.fr       */
+/*   Updated: 2023/08/31 23:56:04 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,22 @@ Cat::~Cat(void)
 
 Cat		&Cat::operator=(Cat const &source)
 {
+	if (this == &source)
+		return (*this);
 	std::cout << "Cat assignment operator called" << std::endl;
 	_type = source.getType();
+	if (_brain != NULL)
+		delete _brain;
+	_brain = new Brain(*source._brain);
 	return (*this);
 }
 
 void	Cat::makeSound(void) const
 {
 	std::cout << "Meow!" << std::endl;
+}
+
+Brain	*Cat::getBrain(void) const
+{
+	return (this->_brain);
 }
