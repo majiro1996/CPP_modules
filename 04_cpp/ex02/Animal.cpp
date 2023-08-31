@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 12:51:20 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/21 13:10:17 by manujime         ###   ########.fr       */
+/*   Updated: 2023/09/01 01:02:11 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Animal::~Animal(void)
 Animal	&Animal::operator=(Animal const &source)
 {
 	std::cout << "Animal assignment operator called" << std::endl;
-	this->_type = source._type;
+	this->_type = source.getType();
 	return (*this);
 }
 
@@ -45,7 +45,9 @@ void	Animal::setType(std::string type)
 	this->_type = type;
 }
 
+/*
 void	Animal::makeSound(void) const
 {
 	std::cout << "Standard Animal sound!!" << std::endl;
 }
+*/
