@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 12:18:48 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/22 13:44:07 by manujime         ###   ########.fr       */
+/*   Updated: 2023/09/01 03:12:06 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Character::Character(void)
 {
+	std::cout << "Default Character constructor called." << std::endl;
 	this->_name = "Default";
 	for (int i = 0; i < 4; i++)
 		this->_inventory[i] = NULL;
@@ -22,6 +23,7 @@ Character::Character(void)
 
 Character::Character(std::string const &name)
 {
+	std::cout << "Named Character constructor called." << std::endl;
 	this->_name = name;
 	for (int i = 0; i < 4; i++)
 		this->_inventory[i] = NULL;
@@ -30,22 +32,26 @@ Character::Character(std::string const &name)
 
 Character::Character(Character const &source)
 {
+	std::cout << "Character copy constructor called." << std::endl;
 	*this = source;
 	return ;
 }
 
 Character::~Character(void)
 {
+	std::cout << _name;
+	std::cout << " Character destructor called." << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_inventory[i])
-			delete this->_inventory[i];
+		if (this->_inventory[i] != NULL)
+			unequip(i);
 	}
 	return ;
 }
 
 Character	&Character::operator=(Character const &source)
 {
+	std::cout << "Character assignment operator called." << std::endl;
 	this->_name = source.getName();
 	for (int i = 0; i < 4; i++)
 	{
@@ -91,6 +97,7 @@ void	Character::unequip(int idx)
 		std::cout << "No materia in the " << idx << " slot." <<std::endl;
 		return ;
 	}
+	std::cout << _name << " unequips " << this->_inventory[idx]->getType() << std::endl;
 	this->_inventory[idx] = NULL;
 }
 
@@ -106,5 +113,6 @@ void	Character::use(int idx, ICharacter &target)
 		std::cout << "No materia in the " << idx << " slot." <<std::endl;
 		return ;
 	}
+	std::cout << _name << " ";
 	this->_inventory[idx]->use(target);
 }

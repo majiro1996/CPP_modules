@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 17:17:09 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/22 16:55:14 by manujime         ###   ########.fr       */
+/*   Updated: 2023/09/01 03:11:08 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,62 @@
 
 int main()
 {
-	IMateriaSource	*src = new MateriaSource();
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
+	AMateria		*cure = new Cure();
+	AMateria		*ice = new Ice();
 
-	ICharacter		*me = new Character("me");
+	MateriaSource	*src = new MateriaSource();
+	src->learnMateria(cure);
+	src->learnMateria(ice);
+	src->learnMateria(cure);
+	src->learnMateria(ice);
+	src->printMaterias();
 
-	AMateria		*tmp;
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
+	delete cure;
+	delete ice;
+
+	Character		*me = new Character("me");
+	Character		*bob = new Character("bob");
+
 	
-	ICharacter		*bob = new Character("bob");
+	me->equip(src->createMateria("cure"));
+	me->equip(src->createMateria("ice"));
+	me->equip(src->createMateria("cure"));
+	me->equip(src->createMateria("ice"));
+	
+	AMateria		*tmp = src->createMateria("cure");
+
+	me->equip(tmp);
+	delete tmp;
+
+
 	me->use(0, *bob);
 	me->use(1, *bob);
+
+	me-> unequip(4);
+	tmp = me-> _inventory[3];
+	me-> unequip(3);
+	delete tmp;
+	tmp = me-> _inventory[2];
+	me-> unequip(2);
+	delete tmp;
+
+	*bob = *me;
+	
+	AMateria *floor;
+
+	floor = me->_inventory[0];
+	me->unequip(0);
+	delete floor;
+	floor = me->_inventory[1];
+	me->unequip(1);
+	delete floor;
+	
+	floor = bob->_inventory[0];
+	bob->unequip(0);
+	delete floor;
+	floor = bob->_inventory[1];
+	bob->unequip(1);
+	delete floor;
 
 	delete bob;
 	delete me;

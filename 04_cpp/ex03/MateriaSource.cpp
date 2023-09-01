@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 13:56:37 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/22 16:31:12 by manujime         ###   ########.fr       */
+/*   Updated: 2023/09/01 02:36:13 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ MateriaSource::~MateriaSource(void)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_materias[i])
+		if (this->_materias[i] != NULL)
 			delete this->_materias[i];
 	}
 	return ;
@@ -55,7 +55,7 @@ void		MateriaSource::learnMateria(AMateria *m)
 {
 	if (this->_count < 4)
 	{
-		this->_materias[this->_count] = m;
+		this->_materias[this->_count] = m->clone();
 		this->_count++;
 	}
 	return ;
@@ -71,3 +71,12 @@ AMateria	*MateriaSource::createMateria(std::string const &type)
 	return (NULL);
 }
 
+void		MateriaSource::printMaterias(void) const
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_materias[i])
+			std::cout << this->_materias[i]->getType() << std::endl;
+	}
+	return ;
+}

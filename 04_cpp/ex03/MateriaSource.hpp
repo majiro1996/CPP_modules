@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 13:55:06 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/22 16:19:27 by manujime         ###   ########.fr       */
+/*   Updated: 2023/09/01 01:51:00 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ class MateriaSource : public IMateriaSource
 
 		void		learnMateria(AMateria *m);
 		AMateria	*createMateria(std::string const &type);
+
+		void 		printMaterias(void) const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 11:37:16 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/22 11:39:48 by manujime         ###   ########.fr       */
+/*   Updated: 2023/09/01 03:07:29 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ Cure::Cure(void) : AMateria("cure")
 	
 }
 
-Cure::Cure(Cure const &source)
+Cure::Cure(Cure const &source) : AMateria("cure")
 {
 	*this = source;
 }
 
 Cure::~Cure(void)
 {
-	
+	std::cout << "Cure destructor called." << std::endl;
 }
 
 Cure	&Cure::operator=(Cure const &source)
