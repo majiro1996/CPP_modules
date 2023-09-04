@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 13:03:52 by manujime          #+#    #+#             */
-/*   Updated: 2023/08/28 16:12:21 by manujime         ###   ########.fr       */
+/*   Updated: 2023/09/04 09:03:11 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,20 @@ int		main(void)
 
 	const WrongAnimal	*meta2 = new WrongAnimal();
 	const WrongAnimal	*j2 = new WrongCat();
+	const WrongCat		*i2 = new WrongCat();
 
 	std::cout << std::endl;
 	std::cout << "meta2->getType(): " << meta2->getType() << std::endl;
 	std::cout << "j2->getType(): " << j2->getType() << std::endl;
+	std::cout << "i2->getType(): " << i2->getType() << std::endl;
 	std::cout << std::endl;
 	j2->makeSound();
 	meta2->makeSound();
+	i2->makeSound();
 	std::cout << std::endl;
 	delete meta2;
 	delete j2;
-	
+	delete i2;
+
 	return (0);
 }
