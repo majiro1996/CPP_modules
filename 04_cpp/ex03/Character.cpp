@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 12:18:48 by manujime          #+#    #+#             */
-/*   Updated: 2023/09/01 03:12:06 by manujime         ###   ########.fr       */
+/*   Updated: 2023/09/04 08:48:54 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,12 @@ void	Character::equip(AMateria *m)
 	{
 		if (i == 4)
 		{
-			std::cout << "Inventory full." << std::endl;
+			std::cout << _name << "'s inventory is full." << std::endl;
 			return ;
 		}
 		if (!this->_inventory[i])
 		{
+			std::cout << _name << " equips " << m->getType() << std::endl;
 			this->_inventory[i] = m;
 			return ;
 		}
@@ -89,12 +90,13 @@ void	Character::unequip(int idx)
 {
 	if (idx < 0 || idx > 3)
 	{
+		std::cout << _name << ": not a valid slot." << std::endl;
 		std::cout << "Invalid index." << std::endl;
 		return ;
 	}
 	if (!this->_inventory[idx])
 	{
-		std::cout << "No materia in the " << idx << " slot." <<std::endl;
+		std::cout << _name << idx << " is already empty." << std::endl;
 		return ;
 	}
 	std::cout << _name << " unequips " << this->_inventory[idx]->getType() << std::endl;
@@ -105,7 +107,7 @@ void	Character::use(int idx, ICharacter &target)
 {
 	if (idx < 0 || idx > 3)
 	{
-		std::cout << "Invalid index." << std::endl;
+		std::cout << _name << ": not a valid slot." << std::endl;
 		return ;
 	}
 	if (!this->_inventory[idx])
@@ -115,4 +117,22 @@ void	Character::use(int idx, ICharacter &target)
 	}
 	std::cout << _name << " ";
 	this->_inventory[idx]->use(target);
+}
+
+void	Character::printInventory(void) const
+{
+	std::cout << _name << "'s inventory:" << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_inventory[i])
+			std::cout << i << ": " << this->_inventory[i]->getType() << std::endl;
+		else
+			std::cout << i << ": empty" << std::endl;
+	}
+}
+
+void	Character::setName(std::string const &name)
+{
+	std::cout << _name << " is now known as " << name << std::endl;
+	this->_name = name;
 }

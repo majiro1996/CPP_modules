@@ -6,7 +6,7 @@
 /*   By: manujime <manujime@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 17:17:09 by manujime          #+#    #+#             */
-/*   Updated: 2023/09/01 03:11:08 by manujime         ###   ########.fr       */
+/*   Updated: 2023/09/04 08:55:18 by manujime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,14 @@ int main()
 	me->equip(src->createMateria("ice"));
 	me->equip(src->createMateria("cure"));
 	me->equip(src->createMateria("ice"));
-	
+
+
 	AMateria		*tmp = src->createMateria("cure");
 
 	me->equip(tmp);
 	delete tmp;
 
+	me->printInventory();
 
 	me->use(0, *bob);
 	me->use(1, *bob);
@@ -57,7 +59,11 @@ int main()
 	me-> unequip(2);
 	delete tmp;
 
+	me->printInventory();
 	*bob = *me;
+	
+	bob->setName("Ron");
+	bob->printInventory();
 	
 	AMateria *floor;
 
@@ -74,6 +80,7 @@ int main()
 	floor = bob->_inventory[1];
 	bob->unequip(1);
 	delete floor;
+	bob->unequip(1);
 
 	delete bob;
 	delete me;
